@@ -16,17 +16,17 @@ This is the first part of the methodology. Duis tempor sapien sed tellus ultrice
 
 This is the second part of the methodology. Sed ut ipsum ultrices, interdum ipsum vel, lobortis diam. Curabitur sit amet massa quis tortor molestie dapibus a at libero. Mauris mollis magna quis ante vulputate consequat. Integer leo turpis, suscipit ac venenatis pellentesque, efficitur non sem. Pellentesque eget vulputate turpis. Etiam id nibh at elit fermentum interdum.
 
-<!-- 
-Comments can be added like this.
---> 
+## CODEY CODE CODE
 
-## Results
-
-These are the results. In vitae odio at libero elementum fermentum vel iaculis enim. Nullam finibus sapien in congue condimentum. Curabitur et ligula et ipsum mollis fringilla.
-
-## Discussion
+<!-- NOTE 
+the \ref{} entry in the following paragraph looks good in PDF, but will be EMPTY in HTML.
+-->
 
 Figure \ref{ref_a_figure} shows how to add a figure. Donec ut lacinia nibh. Nam tincidunt augue et tristique cursus. Vestibulum sagittis odio nisl, a malesuada turpis blandit quis. Cras ultrices metus tempor laoreet sodales. Nam molestie ipsum ac imperdiet laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+```{.java caption="Hello World in Java" #java-hello-world}
+System.out.println("Hello World")
+```
 
 ![RV Calypso is a former British Royal Navy minesweeper converted into a research vessel for the oceanographic researcher Jacques-Yves Cousteau. It was equipped with a mobile laboratory for underwater field research. \label{ref_a_figure}](source/figures/example_figure.pdf)
 

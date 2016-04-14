@@ -49,6 +49,7 @@ tex:
 	-N \
 	--csl="$(STYLEDIR)/ref_format.csl" \
 	--latex-engine=xelatex
+	
 
 docx:
 	pandoc "$(INPUTDIR)"/*.md \
