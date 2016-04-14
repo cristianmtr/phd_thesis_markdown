@@ -1,11 +1,11 @@
 PY=python
 PANDOC=pandoc
 
-BASEDIR=$(CURDIR)
-INPUTDIR=$(BASEDIR)/source
-OUTPUTDIR=$(BASEDIR)/output
-TEMPLATEDIR=$(INPUTDIR)/templates
-STYLEDIR=$(BASEDIR)/style
+BASEDIR=.
+INPUTDIR=./source
+OUTPUTDIR=./output
+TEMPLATEDIR=./source/templates
+STYLEDIR=./style
 
 BIBFILE=$(INPUTDIR)/references.bib
 
@@ -25,19 +25,18 @@ help:
 	@echo 'or generic ones from: https://github.com/jgm/pandoc-templates		  '
 
 pdf:
-	pandoc "$(INPUTDIR)"/*.md \
-	-o "$(OUTPUTDIR)/thesis.pdf" \
-	-H "$(STYLEDIR)/preamble.tex" \
-	--template="$(STYLEDIR)/template.tex" \
-	--bibliography="$(BIBFILE)" 2>pandoc.log \
-	--csl="$(STYLEDIR)/ref_format.csl" \
+	pandoc $(INPUTDIR)/*.md \
+	-o $(OUTPUTDIR)/thesis.pdf \
+	-H $(STYLEDIR)/preamble.tex \
+	--template=$(STYLEDIR)/template.tex \
+	--bibliography=$(BIBFILE) \
+	--csl=$(STYLEDIR)/ref_format.csl \
 	--highlight-style pygments \
 	-V fontsize=12pt \
 	-V papersize=a4paper \
 	-V documentclass:report \
 	-N \
 	--latex-engine=xelatex \
-	--verbose
 
 tex:
 	pandoc "$(INPUTDIR)"/*.md \
